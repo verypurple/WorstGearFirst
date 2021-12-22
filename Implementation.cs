@@ -14,7 +14,7 @@ namespace WorstGearFirst
 
             foreach (var item in items)
             {
-                if (!worstItem || item.GetNormalizedCondition() < worstItem.GetNormalizedCondition())
+                if (!worstItem || !item.IsWornOut() && item.GetNormalizedCondition() < worstItem.GetNormalizedCondition())
                 {
                     worstItem = item;
                 }
